@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnSignUp(View view) {
         String msg =" HI LOGIN";
-        Intent in = new Intent(this,login.class);
+        Intent in = new Intent(this,LogIn.class);
         in.putExtra("data",msg);
         startActivity(in);
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     public void login(View view) {
 
         String msg =" HI LOGIN";
-        Intent in = new Intent(this,login.class);
+        Intent in = new Intent(this,LogIn.class);
         in.putExtra("data",msg);
         startActivity(in);
     }
