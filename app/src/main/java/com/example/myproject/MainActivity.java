@@ -13,35 +13,30 @@ import android.widget.RadioGroup;
 public class MainActivity extends AppCompatActivity {
 
     private EditText user;
-    private EditText pass;
+    private EditText password;
     private EditText email;
-    private EditText national;
+    private EditText numid;
     private EditText number;
-    private RadioButton male;
-    private RadioButton female;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         user =  findViewById(R.id.user);
-        pass = findViewById(R.id.pass);
+        password = findViewById(R.id.password);
         email = findViewById(R.id.email);
         number = findViewById(R.id.number);
-        national= findViewById(R.id.national);
-        male = findViewById(R.id.male);
-        female = findViewById(R.id.female);
-
-
+        numid= findViewById(R.id.numid);
     }
 
-    public void btnSignUp(View view) {
+  /*  public void btnSignUp(View view) {
         String msg =" HI LOGIN";
         Intent in = new Intent(this,LogIn.class);
         in.putExtra("data",msg);
         startActivity(in);
 
-    }
+    } */
 
     public void login(View view) {
 
