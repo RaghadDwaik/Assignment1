@@ -19,7 +19,7 @@ public class SignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_signup);
 
     }
 
@@ -27,6 +27,7 @@ public class SignUp extends AppCompatActivity {
 
         Intent in = new Intent(this, SignUp.class);
         startActivity(in);
+
     }
 
     public void login(View view) {
