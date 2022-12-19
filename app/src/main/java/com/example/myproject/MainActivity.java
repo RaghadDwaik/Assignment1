@@ -30,19 +30,13 @@ public class MainActivity extends AppCompatActivity {
         numid= findViewById(R.id.numid);
     }
 
-    public void btnSignUp(View view) {
-        String msg =" HI LOGIN";
-        Intent in = new Intent(this,LogIn.class);
-        in.putExtra("data",msg);
+    public void signup(View view) {
+        Intent in = new Intent(this,MainActivity.class);
         startActivity(in);
-
     }
 
     public void login(View view) {
-
-        String msg ="HI LOGIN";
         Intent in = new Intent(this,LogIn.class);
-        in.putExtra("data",msg);
         startActivity(in);
     }
 }
