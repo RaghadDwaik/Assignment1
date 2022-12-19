@@ -21,7 +21,7 @@ public class LogIn extends AppCompatActivity {
         edt2 = findViewById(R.id.edt2);
 
     }
-    public void login(View view) {
+    public void signup(View view) {
 //String str= edt1.toString()+edt2.toString();
         Intent in = new Intent(this, SignUp.class);
         startActivity(in);
