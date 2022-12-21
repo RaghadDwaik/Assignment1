@@ -51,11 +51,13 @@
         android:inputType="textPassword" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/button_login"
+        android:onClick="login"
         android:text="@string/login"
         tools:ignore="MissingClass" />
 

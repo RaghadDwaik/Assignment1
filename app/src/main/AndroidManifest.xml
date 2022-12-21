@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.myproject">
 
     <application
@@ -10,6 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyProject">
 
+        <activity
+            android:name=".Room"
+            android:exported="false"
+            tools:ignore="DuplicateActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".SignUp"
             android:exported="false">
@@ -25,10 +34,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".LogIn" />
-
     </application>
 
 </manifest>
