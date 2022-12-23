@@ -10,12 +10,15 @@ import android.widget.EditText;
 
 public class Welcome extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
     }
+
     public void signup(View view) {
 
         Intent in = new Intent(this, SignUp.class);
@@ -24,6 +27,11 @@ public class Welcome extends AppCompatActivity {
 
     public void login(View view) {
         Intent in = new Intent(this, LogIn.class);
+        startActivity(in);
+    }
+
+    public void Gallery(View view) {
+        Intent in = new Intent(this, Gallery.class);
         startActivity(in);
     }
 }

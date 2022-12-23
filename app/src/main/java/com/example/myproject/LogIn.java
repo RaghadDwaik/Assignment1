@@ -29,4 +29,9 @@ public class LogIn extends AppCompatActivity {
 
 
     }
+
+    public void btnRoom(View view) {
+        Intent in = new Intent(this, Room.class);
+        startActivity(in);
+    }
 }
