@@ -23,15 +23,15 @@ public class SignUp extends AppCompatActivity {
 
     }
 
-    public void signup(View view) {
 
-        Intent in = new Intent(this, SignUp.class);
-        startActivity(in);
-
-    }
 
     public void login(View view) {
         Intent in = new Intent(this, LogIn.class);
+        startActivity(in);
+    }
+
+    public void btnH(View view) {
+        Intent in = new Intent(this, Home.class);
         startActivity(in);
     }
 }

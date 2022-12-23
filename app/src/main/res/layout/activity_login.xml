@@ -50,7 +50,8 @@
         android:layout_marginBottom="30dp"
         android:inputType="textPassword" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -58,7 +59,7 @@
         android:onClick="btnRoom"
         android:background="@drawable/button_login"
         android:text="@string/login"
-         />
+        tools:ignore="MissingClass" />
 
     <Button
         android:layout_width="match_parent"

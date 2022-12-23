@@ -5,12 +5,24 @@
       <map>
         <entry key="..\:/Users/MASS/AndroidStudioProjects/MyProject2/app/src/main/res/layout/activity_login.xml" value="0.1390625" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/MyProject2/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_booked.xml" value="0.1" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_calender.xml" value="0.1" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_cardview.xml" value="0.1" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_checkout.xml" value="0.1" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_each_room.xml" value="0.13072916666666667" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_signup.xml" value="0.11481481481481481" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/bakeup/my-project/app/src/main/res/layout/activity_welcome.xml" value="0.13072916666666667" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/drawable/photo.xml" value="0.1" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/drawable/photo1_background.xml" value="0.1" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_adapter_room.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_each_room.xml" value="0.12864583333333332" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_gallery.xml" value="0.25" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_room.xml" value="0.153125" />
+        <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_room2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_rooms.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_signup.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MASS/AndroidStudioProjects/my-project/app/src/main/res/layout/activity_welcome.xml" value="0.2109704641350211" />

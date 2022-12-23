@@ -6,17 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class eachRoom extends AppCompatActivity {
+public class Checkout extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_each_room);
+        setContentView(R.layout.activity_checkout);
     }
 
-    public void checkin(View view) {
-        Intent in  = new Intent (this,Calender.class);
+    public void saveout(View view) {
+        Intent in  = new Intent (this,Booked.class);
         startActivity(in);
     }
 }
-

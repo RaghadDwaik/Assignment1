@@ -7,7 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import java.net.IDN;
+
+
 public class Room extends AppCompatActivity implements Recycler{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +35,13 @@ public class Room extends AppCompatActivity implements Recycler{
     @Override
     public void onItemClick(int position) {
         Intent in = new Intent(this,eachRoom.class);
+        in.putExtra("raghad",
+                position);
         startActivity(in);
 
 
     }
+
 }
+
+

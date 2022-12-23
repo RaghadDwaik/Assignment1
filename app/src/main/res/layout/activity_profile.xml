@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/image"
+        android:drawableLeft="@drawable/person2"
+
+        />
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/name1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_login"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:text="Asma Abdullah"
+        android:textSize="20dp">
+
+    </TextView>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/button_login"
+        android:drawableLeft="@drawable/email1"
+        android:text="asmaabdullah954@gmail.com"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_login"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="2dp"
+        android:text="0568712184"
+        android:textSize="20dp">
+
+
+    </TextView>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_login"
+        android:drawableLeft="@drawable/wc"
+        android:text="Female"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/Nid"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_login"
+        android:drawableLeft="@drawable/id"
+        android:text="4121457852"
+        android:textSize="20dp">
+
+    </TextView>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:onClick="btun"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+
+
+</LinearLayout>
