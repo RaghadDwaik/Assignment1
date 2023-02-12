@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,33 +23,35 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SignUp extends AppCompatActivity {
+public class addRoom extends AppCompatActivity {
 
-    private EditText user;
-    private EditText password;
-    private EditText email;
-    private EditText numid;
-    private EditText number;
-    private TextView text;
+    private EditText title;
+    private EditText price;
+    private EditText floor;
+    private EditText beds;
+    private EditText description;
+    private EditText image;
+    private TextView text1;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_add_room);
 
-        user = findViewById(R.id.user);
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
-        text = findViewById(R.id.text);
-        number = findViewById(R.id.number);
-        numid = findViewById(R.id.numid);
+        title = findViewById(R.id.title);
+        price = findViewById(R.id.price);
+        floor = findViewById(R.id.floorNum);
+        text1 = findViewById(R.id.text1);
+        beds = findViewById(R.id.Numbed);
+        description = findViewById(R.id.description);
+        image = findViewById(R.id.image);
 
     }
 
-    private void addBook(String email, String userName, String pass,String mobileNum, String id){
-        String url = "http://10.0.2.2:80/mobileProject/regester.php";
-        RequestQueue queue = Volley.newRequestQueue(SignUp.this);
+    private void addRoom(String title, String price, String floorNum,String Numbed, String description,String image){
+        String url = "http://10.0.2.2:80/mobileProject/addRoom.php";
+        RequestQueue queue = Volley.newRequestQueue(addRoom.this);
         StringRequest request = new StringRequest(Request.Method.POST, url, new com.android.volley.Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -56,7 +59,7 @@ public class SignUp extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     // on below line we are displaying a success toast message.
-                    Toast.makeText(SignUp.this,
+                    Toast.makeText(addRoom.this,
                             jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -67,7 +70,7 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // method to handle errors.
-               text.setText(error.toString());
+                text1.setText(error.toString());
             }
         }) {
             @Override
@@ -86,11 +89,12 @@ public class SignUp extends AppCompatActivity {
 
                 // on below line we are passing our
                 // key and value pair to our parameters.
-                params.put("email", email);
-                params.put("userName", userName);
-                params.put("PASSWORD1", pass);
-                params.put("mobileNum", mobileNum);
-                params.put("national", id);
+                params.put("title", title);
+                params.put("price", price);
+                params.put("floor", floorNum);
+                params.put("beds", Numbed);
+                params.put("description", description);
+                params.put("image", image);
 
                 // at last we are returning our params.
                 return params;
@@ -103,21 +107,19 @@ public class SignUp extends AppCompatActivity {
 
 
 
-    public void login(View view) {
-        Intent in = new Intent(this, LogIn.class);
-        startActivity(in);
-    }
 
     public void btnH(View view) {
-        String userr = user.getText().toString();
-        String email1 = email.getText().toString();
-        String pass1 = password.getText().toString();
-        String numberr = number.getText().toString();
-        String id1 = numid.getText().toString();
+        String titlee = title.getText().toString();
+        String pricee = price.getText().toString();
+        String floorn = floor.getText().toString();
+        String bed = beds.getText().toString();
+        String des = description.getText().toString();
+        String image1 = image.toString();
 
 
-        addBook(userr,email1, pass1,numberr,id1);
-        Intent in = new Intent(this, Home.class);
+        addRoom(titlee,pricee, floorn,bed,des,image1);
+        Intent in = new Intent(this,Room.class);
         startActivity(in);
+
     }
 }

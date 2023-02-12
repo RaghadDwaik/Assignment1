@@ -1,23 +1,84 @@
 package com.example.myproject;
 
 public class Rooms {
-    private String name;
-    private static int imageID;
+    private int id;
+    private double price;
+    private String title;
+    private int floor;
+    private int beds;
+    private String description;
+    private String image;
 
-    public static final Rooms[] Room = {
-            new Rooms("Room Number 1\n Price : 100$ \n Floor :1  " +  " \n click to book room",R.drawable.room1),
-            new Rooms("Room Number 2\n Price : 70$ \n Floor :1  " +  " \n click to book room ", R.drawable.room2),
-            new Rooms("Room Number 3\n Price : 80$ \n Floor :3  " +  " \n click to book room ", R.drawable.room3),
-            new Rooms("Room Number 4\n Price : 50$ \n Floor :4  " +  " \n click to book room ", R.drawable.room4),
-            new Rooms("Room Number 5 \n Price : 90$ \n Floor :7  " +  " \n click to book room ", R.drawable.room5)
-
-    };
-    private Rooms(String name, int imageID){
-        this.name = name;
-        this.imageID = imageID;
+    public int getId() {
+        return id;
     }
-    public String getName(){return name;}
-    public int getImageID(){return imageID;}
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getFloor() {
+        return floor;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    public int getBeds() {
+        return beds;
+    }
+
+    public void setBeds(int beds) {
+        this.beds = beds;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+
+
+
+    public Rooms(int id, double price, String title, int floor, int beds, String description, String image) {
+        this.id = id;
+        this.price = price;
+        this.title = title;
+        this.floor = floor;
+        this.beds = beds;
+        this.description = description;
+        this.image = image;
+    }
 }
+
+
+
 

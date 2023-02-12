@@ -11,4 +11,11 @@
     <string name="id_number">ID Number</string>
     <string name="sign_upp">Sign Up</string>
     <string name="you_already_have_an_account">You already have an account</string>
+    <string name="title">title</string>
+    <string name="price">price</string>
+    <string name="NumBed">NumBed</string>
+    <string name="floor">floor</string>
+    <string name="description">description</string>
+    <string name="img">img</string>
+    <string name="addRm">Add Room</string>
 </resources>

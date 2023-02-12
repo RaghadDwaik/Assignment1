@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".LogIn">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="180dp"
@@ -70,4 +79,12 @@
         android:onClick="signup"
         android:text="No account yet ? Create an account"
         tools:ignore="OnClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text" />
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

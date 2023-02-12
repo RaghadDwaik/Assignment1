@@ -24,7 +24,7 @@
                 android:background="@drawable/login"
                 android:fontFamily="cursive"
                 android:paddingVertical="70dp"
-                android:text="@string/sign_up"
+                android:text="@string/addRm"
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="30sp" />
@@ -34,12 +34,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
-                android:text="@string/email"
+                android:text="@string/title"
                 android:textColor="#cdaf95"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
@@ -51,13 +51,13 @@
                 android:layout_height="wrap_content"
 
                 android:layout_marginHorizontal="25dp"
-                android:text="@string/username"
+                android:text="@string/price"
                 android:textColor="#cdaf95"
                 android:textSize="20sp"
                 tools:ignore="InvalidId" />
 
             <EditText
-                android:id="@+id/user"
+                android:id="@+id/price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
@@ -68,12 +68,12 @@
                 android:layout_height="wrap_content"
 
                 android:layout_marginHorizontal="30dp"
-                android:text="@string/password"
+                android:text="@string/NumBed"
                 android:textColor="#cdaf95"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/Numbed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
@@ -85,12 +85,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
-                android:text="@string/mobile_number"
+                android:text="@string/floor"
                 android:textColor="#cdaf95"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/number"
+                android:id="@+id/floorNum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
@@ -102,17 +102,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
-                android:text="@string/id_number"
+                android:text="@string/description"
                 android:textColor="#cdaf95"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/numid"
+                android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginBottom="20dp"
-                android:inputType="phone" />
+               />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/image"
+                android:hint="please insert the url of image"
+                />
 
             <Button
                 android:layout_width="match_parent"
@@ -120,25 +127,16 @@
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginBottom="25dp"
                 android:background="@drawable/button_login"
-                android:text="@string/sign_upp"
+                android:text="@string/addRm"
                 android:onClick="btnH"                 />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/button_login"
-                android:onClick="login"
-                android:text="@string/you_already_have_an_account"
-                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/text"
+                android:id="@+id/text1"
                 />
+
 
         </LinearLayout>
     </ScrollView>

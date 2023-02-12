@@ -1,5 +1,6 @@
 package com.example.myproject;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,52 +12,22 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class CardAdapter
         extends RecyclerView.Adapter<CardAdapter.ViewHolder>{
 
-    private int[] captions;
-    private int[] imageIds;
+    private Context mCtx;
+    private java.util.List<Room> List;
 
-    public CardAdapter(int[] captions, int[] imageIds){
-        this.captions = captions;
-        this.imageIds = imageIds;
-    }
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        CardView v = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_cardview,
-                parent,
-                false);
+    public CardAdapter(Context mCtx, List<Room> List) {
+        this.mCtx = mCtx;
+        this.List = List;
 
-        return new ViewHolder(v);
-    }
 
-    @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-        CardView cardView = holder.cardView;
-        ImageView imageView = (ImageView) cardView.findViewById(R.id.image);
-        Drawable dr = ContextCompat.getDrawable(cardView.getContext(), imageIds[position]);
-        imageView.setImageDrawable(dr);
-        TextView txt = (TextView)cardView.findViewById(R.id.txtName);
-        txt.setText(captions[position]);
-        cardView.setOnClickListener( new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                //
-            }
-        });
-    }
-
-    @Override
-    public int getItemCount() {
-        return captions.length;
-    }
-
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-        private CardView cardView;
-        public ViewHolder(CardView cardView){
-            super(cardView);
-            this.cardView = cardView;
-        }
-
-    }
 }
+
+    public class ViewHolder {
+
+    }
+    }

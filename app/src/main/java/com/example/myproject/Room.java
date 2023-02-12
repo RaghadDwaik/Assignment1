@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.net.IDN;
 
@@ -42,6 +43,10 @@ public class Room extends AppCompatActivity implements Recycler{
 
     }
 
+    public void roomAdd(View view) {
+        Intent in = new Intent(this,addRoom.class);
+        startActivity(in);
+    }
 }
 
 
