@@ -1,7 +1,5 @@
 package com.example.myproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -117,7 +117,7 @@ public class SignUp extends AppCompatActivity {
 
 
         addBook(userr,email1, pass1,numberr,id1);
-        Intent in = new Intent(this, Home.class);
-        startActivity(in);
+       // Intent in = new Intent(this, Home.class);
+        //startActivity(in);
     }
 }

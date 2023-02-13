@@ -3,7 +3,6 @@ package com.example.myproject;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,17 +12,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
-import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +29,7 @@ public class LogIn extends AppCompatActivity {
     private TextView text;
     private static final String TAG = LogIn.class.getSimpleName();
 
-    String url = "http://10.0.2.2:80/mobileProject/login.php";
+
     private ProgressDialog progressDialog;
 
     @Override
@@ -60,16 +54,16 @@ public class LogIn extends AppCompatActivity {
     }
 
     public void btnRoom(View view) {
-        String userName = edit1.getText().toString().trim();
-        String password = edit2.getText().toString().trim();
+        String userName = edit1.getText().toString();
+        String password = edit2.getText().toString();
 
-
+        String url = "http://10.0.2.2:80/mobileProject/login.php";
         if (userName.equals("")) {
             Toast.makeText(this, "Enter User Name ", Toast.LENGTH_SHORT).show();
         } else if (password.equals("")) {
             Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
         } else {
-
+           // text.setText("gg"+userName);
             final ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setMessage("Please Wait");
 
@@ -79,10 +73,21 @@ public class LogIn extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
 
+                  String t = "correct";
+                    if(response.equals(t) ) {
+
+                        Toast.makeText(LogIn.this, response, Toast.LENGTH_SHORT).show();
+                       startActivity(new Intent(getApplicationContext(), Home.class));
+                    }
+                    else {
+                        Toast.makeText(LogIn.this, response, Toast.LENGTH_LONG).show();
+                    }
+
+
                     progressDialog.dismiss();
 
-                    startActivity(new Intent(getApplicationContext(), Home.class));
-                    Toast.makeText(LogIn.this, response, Toast.LENGTH_SHORT).show();
+                   // startActivity(new Intent(getApplicationContext(), Home.class));
+                    //Toast.makeText(LogIn.this, response, Toast.LENGTH_SHORT).show();
                 }
 
                 }, new Response.ErrorListener() {
@@ -96,8 +101,8 @@ public class LogIn extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> params = new HashMap<String, String>();
-                    params.put("user", userName);
-                    params.put("password", password);
+                    params.put("userName", userName);
+                    params.put("PASSWORD1", password);
                     return params;
 
                 }

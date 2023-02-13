@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Room">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,6 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="vertical">
 
 
@@ -29,6 +32,12 @@
         android:layout_height="wrap_content"
         android:onClick="roomAdd"
         android:text="ADD ROOM" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text"/>
+3"
 
 
 </LinearLayout>
