@@ -1,6 +1,8 @@
 package com.example.myproject;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,10 +28,19 @@ public class SignUp extends AppCompatActivity {
 
     private EditText user;
     private EditText password;
-    private EditText email;
+    private EditText email1;
     private EditText numid;
     private EditText number;
     private TextView text;
+
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
+    private Context context;
+    private static final String SHARED_PREF_NAME="mypref";
+    private static final String KEY_NAME="name";
+    private static final String KEY_EMAIL="email";
+    private static final String KEY_PHONE="phone";
+    private static final String KEY_ID="id";
 
 
     @Override
@@ -38,11 +49,24 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         user = findViewById(R.id.user);
-        email = findViewById(R.id.email);
+        email1 = findViewById(R.id.email);
         password = findViewById(R.id.password);
         text = findViewById(R.id.text);
         number = findViewById(R.id.number);
         numid = findViewById(R.id.numid);
+
+        preferences=getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
+
+        String n = preferences.getString(KEY_NAME
+                ,null);
+        String n1 = preferences.getString(KEY_EMAIL
+                ,null);
+        String n2 = preferences.getString(KEY_PHONE
+                ,null);
+        String n3 = preferences.getString(KEY_ID
+                ,null);
+
+
 
     }
 
@@ -99,6 +123,14 @@ public class SignUp extends AppCompatActivity {
         // below line is to make
         // a json object request.
         queue.add(request);
+
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(KEY_NAME,user.getText().toString());
+        editor.putString(KEY_EMAIL,email1.getText().toString());
+        editor.putString(KEY_PHONE,number.getText().toString());
+        editor.putString(KEY_ID,numid.getText().toString());
+
+        editor.commit();
     }
 
 
@@ -110,14 +142,16 @@ public class SignUp extends AppCompatActivity {
 
     public void btnH(View view) {
         String userr = user.getText().toString();
-        String email1 = email.getText().toString();
+        String email2 = email1.getText().toString();
         String pass1 = password.getText().toString();
         String numberr = number.getText().toString();
         String id1 = numid.getText().toString();
 
 
-        addBook(userr,email1, pass1,numberr,id1);
-       // Intent in = new Intent(this, Home.class);
-        //startActivity(in);
+        addBook(userr,email2, pass1,numberr,id1);
+        Intent in = new Intent(this, Home.class);
+        startActivity(in);
     }
+
+
 }

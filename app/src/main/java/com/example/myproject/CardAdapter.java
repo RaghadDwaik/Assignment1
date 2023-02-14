@@ -46,11 +46,13 @@ public class CardAdapter
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         final Rooms room = items.get(position);
-        text.setText("raghad f");
+       // text.setText("raghad f");
         CardView cardView = holder.cardView;
         ImageView imageView = (ImageView) cardView.findViewById(R.id.image);
         if (!room.getImage().isEmpty() && room.getImage() != null) {
+            System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
             Glide.with(context).load(room.getImage()).into(imageView);
+
         }
         else {
             text.setText("image is empty");
@@ -60,7 +62,7 @@ public class CardAdapter
 
         TextView type_txt = (TextView)cardView.findViewById(R.id.txtName);
         type_txt.setText(room.getName());
-        ImageView tv_img = (ImageView) cardView.findViewById(R.id.image);
+        ImageView tv_img =  cardView.findViewById(R.id.image);
 
         cardView.setOnClickListener( new View.OnClickListener(){
             @Override

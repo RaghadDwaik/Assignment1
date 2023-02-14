@@ -1,23 +1,23 @@
 package com.example.myproject;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 public class Profile extends AppCompatActivity {
     private TextView name, email, phone, id,text;
+    private SharedPreferences preferences;
+    private SharedPreferences.Editor editor;
+    private static final String SHARED_PREF_NAME="mypref";
+    private static final String KEY_NAME="name";
+    private static final String KEY_EMAIL="email";
+    private static final String KEY_PHONE="phone";
+    private static final String KEY_ID="id";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,55 +29,37 @@ public class Profile extends AppCompatActivity {
         id = findViewById(R.id.Nid);
         text = findViewById(R.id.text);
 
-        getUserInfo();
+        preferences=getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
+
+        String n = preferences.getString(KEY_NAME
+                  ,null);
+
+        String n1 = preferences.getString(KEY_EMAIL
+                ,null);
+        String n2 = preferences.getString(KEY_PHONE
+                ,null);
+
+        String n3 = preferences.getString(KEY_ID
+                ,null);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.commit();
+       // finish();
+
+        name.setText(n);
+        email.setText(n1);
+        phone.setText(n2);
+        id.setText(n3);
+
+       // getUserInfo();
     }
 
-    private void getUserInfo() {
-        RequestQueue queue = Volley.newRequestQueue(this);
 
-        // URL to retrieve the user's information
-        String url = "http://10.0.2.2:80/mobileProject/profile.php?userid=+userid";
-     //   name.setText("rrrrrrrrrr");
-        // Make a GET request to the server
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-
-                    @Override
-
-                    public void onResponse(String response) {
-                        try {
-                            // Convert the response to a JSON object
-                            JSONObject jsonObject = new JSONObject(response);
-
-                            // Extract the user's information from the JSON object
-                            String name1 = jsonObject.getString("userName");
-                            String email1 = jsonObject.getString("email");
-                            String phone1 = jsonObject.getString("mobileNum");
-                            String id1 = jsonObject.getString("national");
-
-
-
-                            email.setText(email1);
-                            phone.setText(phone1);
-                            id.setText(id1);
-
-                        } catch (JSONException e) {
-                            text.setText(e.toString());
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        text.setText(error.toString());
-                    }
-
-
-                });
-        queue.add(stringRequest);
-    }
 
     public void btun(View view) {
+
+      Intent in = new Intent(this,Welcome.class);
+      startActivity(in);
     }
 }
 

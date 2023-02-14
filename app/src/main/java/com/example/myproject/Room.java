@@ -38,7 +38,8 @@ public class Room extends AppCompatActivity {
         setContentView(R.layout.activity_room);
         recycler = findViewById(R.id.room_recycler);
         text = findViewById(R.id.text);
-
+        //Rooms r = new Rooms("jnk","https://tinypng.com/images/social/website.jpg");
+       // items.add(r);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         loadItems();
 
@@ -61,8 +62,12 @@ public class Room extends AppCompatActivity {
                                 JSONObject object = array.getJSONObject(i);
                                 String name = object.optString("name");
                                 String image = object.optString("image");
+                                System.out.println("############################# image"+image);
                           //      Log.e("roomrecycler pic", image);
-                                Rooms room = new Rooms(name,image);
+                                Rooms room = new Rooms();
+                                room.setImage(image);
+                                room.setName(name);
+
 
                                 items.add(room);
 

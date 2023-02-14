@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SignUp"
+    tools:context=".addRoom"
     >
 
     <ScrollView
@@ -18,6 +18,8 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/texts"
+
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:layout_marginBottom="25dp"
@@ -30,6 +32,7 @@
                 android:textSize="30sp" />
 
             <TextView
+                style="@style/texts"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,6 +50,8 @@
                 android:inputType="textEmailAddress" />
 
             <TextView
+                style="@style/texts"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -64,6 +69,8 @@
                 android:layout_marginBottom="20dp" />
 
             <TextView
+                style="@style/texts"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -81,7 +88,7 @@
                 android:inputType="textPassword" />
 
             <TextView
-
+                style="@style/texts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
@@ -97,13 +104,23 @@
                 android:layout_marginBottom="20dp"
                 android:inputType="phone" />
 
+
+
+
+
+
+
+
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:text="@string/description"
+                style="@style/texts"
+
                 android:textColor="#cdaf95"
+
                 android:textSize="20sp" />
 
             <EditText
@@ -112,21 +129,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginBottom="20dp"
-               />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/image"
-                android:hint="please insert the url of image"
                 />
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginBottom="25dp"
                 android:background="@drawable/button_login"
+                style="@style/TextAppearance"
                 android:text="@string/addRm"
                 android:onClick="btnH"                 />
 
